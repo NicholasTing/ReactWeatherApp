@@ -10,10 +10,10 @@ export default function(state = [], action){
 
     switch(action.type){
         case FETCH_WEATHER:
-            return state.concat([action.payload.data]);
+            // return state.concat([action.payload.data]);
 
-            // es6 context
-            // return [action.payload.data, ...state]; 
+            // es6 context, this one adds the newest to the top
+            return [action.payload.data, ...state]; 
             // [city2, city1 ] not [city, [city,city]]
         
     }
